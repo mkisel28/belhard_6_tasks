@@ -6,11 +6,8 @@
 """
 
 
-def sum_of_numbers(n, sum=0):
-    if len(str(n)) == 0:
-        return sum
-    else:
-        return sum_of_numbers(str(n)[1:], sum + int(str(n)[0]))
+def sum_of_numbers(n: int):
+    return sum_of_numbers(n / 10) + n % 10 if n > 9 else n
 
 
 print(sum_of_numbers(666))

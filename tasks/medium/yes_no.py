@@ -5,13 +5,11 @@
 
 
 def yes_or_no(list_1: list):
-    new_list = []
-    for i in list_1:
-        if i not in new_list:
-            print("No")
-            new_list.append(i)
-        else:
-            print("Yes")
+    new_list = set(list_1)
+    if len(new_list) == len(list_1):
+        print("Yes")
+    else:
+        print("No")
 
 
 yes_or_no([1, 2, 3, 2, 5, 3, 2, 1])
